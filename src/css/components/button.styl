@@ -1,0 +1,21 @@
+/**
+ * Button
+ */
+
+.button
+  position relative
+  display inline-block
+  cursor pointer
+  padding 15px 40px
+  text-align center
+  text-transform uppercase
+  letter-spacing 2px
+  color $white
+  background $primary
+  border none
+
+  transition background 300ms
+
+  &:hover,
+  &:active
+    background darken($primary, 10%)

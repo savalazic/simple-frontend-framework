@@ -1,0 +1,87 @@
+/**
+ * Icons
+ * -----
+ * Required icons register using
+ * Ionicons font family.
+ */
+
+.icon
+  position relative
+
+  /**
+   * Set defaults.
+   */
+  &:before
+    font-family $icons
+    font-size rem(22px)
+
+    /**
+     * Register basic icons.
+     */
+
+    .phone&
+      content '\f2d2'
+
+    .facebook&
+      content '\f231'
+
+    .twitter&
+      content '\f243'
+
+    .instagram&
+      content '\f351'
+
+    .youtube&
+      content '\f24d'
+
+    .pinterest&
+      content '\f2b1'
+
+    .linkedin&
+      content '\f239'
+
+  /**
+   * Style arrow ( up / down ) icon.
+   */
+  &.arrow
+
+    $icon-size = 44px // variable size
+
+    display block
+    width $icon-size
+    margin auto
+
+    &:before
+      line-height $icon-size
+      pointer-events none
+      transition color 400ms
+
+      .up&
+        content '\f366' // up char
+
+      .down&
+        content '\f35d' // down char
+
+    /**
+     * Add circle around the icon.
+     */
+    &:after
+      content ''
+      absolute 50% _ _ 50%
+      transform translate(-50%, -50%)
+      size $icon-size
+      border-radius 50%
+      border 1px solid $secondary
+      transition transform 400ms
+
+    /**
+     * Create transitions on hover.
+     */
+
+    &:hover
+
+      &:before
+        color $secondary
+
+      &:after
+        transform translate(-50%, -50%) scale(1.1)

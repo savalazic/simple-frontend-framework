@@ -1,0 +1,60 @@
+/**
+ * Footer
+ */
+
+footer
+  background #333
+  color white
+  padding 48px 36px
+
+  img
+    max-width 90px
+
+    @media (max-width: $mobile)
+      margin 20px 0 40px
+
+  p
+    margin 10px 0
+
+    @media (max-width: $mobile)
+      max-width 240px
+      margin 10px auto
+
+  .contact
+    a
+      margin 0 10px
+
+      transition color 300ms
+      &:hover
+        color $secondary
+
+  .copyright
+    margin-bottom 5px
+    font-size rem(14px)
+    color transparent($white, 0.5)
+
+  .by
+    color transparent($white, 0.5)
+
+    transition color 300ms
+    &:hover
+      color $white
+
+  .icons
+    margin 40px 0 0
+
+    li
+      display inline-block
+      margin 10px
+
+      a
+        font-size rem(20px)
+        color transparent($white, 0.25)
+
+        transition color 300ms
+        &:hover
+          color transparent($white, 0.75)
+
+  .icon
+    @media (max-width: $mobile)
+      margin 40px auto 0

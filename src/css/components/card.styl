@@ -1,0 +1,72 @@
+/**
+ * Card
+ */
+
+.card
+  margin 10px
+  text-align left
+  cursor pointer
+
+  *
+    pointer-events none
+
+  .image
+    position relative
+    width 100%
+    padding 50% 16px 4px
+    color white
+    transition filter 300ms
+
+  &:hover .image
+    filter brightness(110%) saturate(110%)
+
+  .content
+    padding 24px 16px 16px
+
+    h5
+      font-size rem(24px)
+
+    .price
+      font-weight 600
+      margin-left 7px
+
+      &:before
+        content 'AED'
+        font-size 50%
+        margin-right 3px
+
+    .link
+      margin-top 20px
+
+  &.full
+    box-shadow 0 0 50px 0 transparent($black, 10%)
+
+    .image
+      padding-top 70%
+
+    .content
+      background white
+
+      .wrap
+        height 160px
+
+      h5
+        font-weight 600
+        max-height 70px
+        display block
+        overflow hidden
+        text-overflow ellipsis
+
+        display -webkit-box
+        -webkit-line-clamp 3
+        -webkit-box-orient vertical
+
+      p
+        height 44px
+        display block
+        overflow hidden
+        text-overflow ellipsis
+
+        display -webkit-box
+        -webkit-line-clamp 2
+        -webkit-box-orient vertical

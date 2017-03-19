@@ -1,0 +1,30 @@
+/**
+ * Layers
+ * ------
+ * Basic styles for images and
+ * overall background components.
+ */
+
+.layer
+  absolute 0
+  z-index -1
+
+  /**
+   * Image defaults.
+   */
+  &.image
+    background-position center
+    background-repeat no-repeat
+    background-size cover
+
+  /**
+   * Itterate through layers and scale them
+   * based on their parallax strenght.
+   */
+  for index in 0..10
+    $dataParallax = '[data-parallax="' + (index / 10) + '"]'
+    &{$dataParallax}
+      top    index * (-50px)
+      bottom index * (-50px)
+
+

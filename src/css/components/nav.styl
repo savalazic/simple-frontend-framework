@@ -1,0 +1,77 @@
+nav
+  fixed top left right
+  z-index 9999
+
+  color $primary
+  background transparent($white, 0.85)
+
+  text-align center
+  @media (max-width: $mobile)
+    text-align left
+
+  li
+    display inline-block
+    vertical-align bottom
+
+    @extend h6
+
+    &.menu-item
+      @media (max-width: $mobile)
+        display none
+
+  .primary
+    display inline-block
+
+    transition transform 500ms
+    @media (min-width: 1200px)
+      transform translateX(-5px)
+
+    li
+      margin 20px 10px
+
+      transition margin-left 500ms, margin-right 500ms
+      @media (min-width: 1200px)
+        margin 20px
+
+  .secondary
+    absolute top right
+
+    li
+      font-size rem(12px)
+      margin 16px 20px 0 0
+
+      &.lang
+        font-family $arabic
+        font-weight 300
+
+      &.phone:before
+        font-size rem(10px)
+        margin-right rem(6px)
+
+  .menu-item a
+    position relative
+
+    &:before
+      content ''
+      absolute bottom left right
+      border-bottom 1px solid $secondary
+      transform scaleX(0)
+      transition transform 600ms
+
+    &:hover:before
+      transform scaleX(1)
+
+  li.logo
+    margin 16px 20px
+
+    & a:before
+      display none
+
+    @media (max-width: $mobile)
+      margin 14px 16px
+
+    img
+      max-height 56px
+
+      @media (max-width: $mobile)
+        max-height 40px

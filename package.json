@@ -1,0 +1,44 @@
+{
+  "name": "simple-frontend-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "webpack": "webpack",
+    "bs": "browser-sync start --server 'public' --files '**/*.html|**/*.css|**/*.js' --no-notify"
+  },
+  "author": "Sava Lazic savalazic9@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "0.0.8",
+    "gulp-jade": "^1.1.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify": "0.0.14",
+    "gulp-prettyerror": "^1.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-stylus": "^2.6.0",
+    "gulp-webpack": "^1.5.0",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.18.8",
+    "copy-webpack-plugin": "^3.0.1",
+    "emitter": "0.0.5",
+    "extended-define-webpack-plugin": "^0.1.0",
+    "file-loader": "^0.9.0",
+    "jade": "^1.11.0",
+    "ohpack-webpack-plugin": "git+ssh://git@bitbucket.org/ohlabs/ohpack-webpack-plugin.git",
+    "stylus": "^0.54.5",
+    "stylus-mixer": "git+ssh://git@bitbucket.org/ohlabs/stylus-mixer.git",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.0"
+  }
+}

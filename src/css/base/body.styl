@@ -1,0 +1,33 @@
+/**
+ * Body Styles
+ * -----------
+ * Main / General body styles.
+ */
+
+ body
+  font-family $english
+  font-style  normal
+  font-weight 300
+  color $text
+
+  antialias() // antialias fonts
+
+/**
+ * Customize selection color.
+ */
+::selection
+  background transparent($primary, 0.1)
+
+/**
+ * Remove tap highlight color (iOS)
+ * from all elements on site.
+ */
+*
+  -webkit-tap-highlight-color transparent
+
+/**
+ * Remove user-select from
+ * from clickable elements.
+ */
+img, a, .button, .link
+  user-select none

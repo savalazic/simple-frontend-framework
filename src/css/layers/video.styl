@@ -1,0 +1,29 @@
+/**
+ * Video layer
+ */
+
+.layer.video
+  absolute 0
+  overflow hidden
+  pointer-events none
+
+  & > .col
+    absolute 0
+
+    video
+      absolute top left
+      size 100%
+      border none
+      // transform translateZ(-9999px)
+
+      @media (min-aspect-ratio: 16/9)
+        height 1000%
+        top -450%
+
+      @media (max-aspect-ratio: 16/9)
+        width 1000%
+        left -450%
+
+    // remove bars
+    .zoom&
+      clockhand -18%

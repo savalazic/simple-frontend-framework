@@ -1,0 +1,30 @@
+/**
+ * Loader
+ */
+
+#loader
+  fixed 0
+  pointer-events none
+  z-index 999999999999
+
+  &:before
+    content ''
+    absolute 0
+    background $white
+    z-index -1
+
+    [data-ready='true'] &
+      animate load-swipe 1000ms 2000ms forwards, 100% translateX(100%)
+
+  img
+    max-width 280px
+    absolute 50% _ _ 50%
+    transform translateX(-60%) translateY(-50%)
+    opacity 0
+
+    [data-ready='true'] &
+      animate load-logo 2500ms 100ms forwards , \
+        0%   translateX(-60%) translateY(-50%) opacity(0), \
+        40%  translateX(-50%) translateY(-50%) opacity(1), \
+        70%  translateX(-50%) translateY(-50%) opacity(1), \
+        100% translateX(-30%) translateY(-50%) opacity(0)

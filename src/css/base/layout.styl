@@ -1,0 +1,108 @@
+/**
+ * Layout
+ * ------
+ * Main layout component.
+ */
+
+section
+  padding 50px 0
+
+.row
+  display table
+  position relative
+  width 100%
+  table-layout fixed
+  overflow hidden
+
+  &.row-reverse
+    direction rtl
+
+    & > .col
+      direction ltr
+
+  /**
+   * Set block to full height.
+   */
+  &.fullHeight
+    height 100vh
+
+  /**
+   * Set block to site width.
+   */
+  &.siteWidth
+    max-width $max-width
+    margin auto
+
+  /**
+   * Set block to full width.
+   */
+  &.fullWidth
+    max-width 100%
+    margin auto
+
+  /**
+   * Registe block's children
+   * as it's helper elements.
+   */
+  & > .col
+    display table-cell
+    width auto
+    height 100%
+    vertical-align top
+
+    &.col-1
+      width 8.333333%
+
+    &.col-2
+      width 16.666667%
+
+    &.col-3
+      width 25%
+
+    &.col-4
+      width 33.333333%
+
+    &.col-5
+      width 41.666667%
+
+    &.col-6
+      width 50%
+
+    &.col-7
+      width 58.333333%
+
+    &.col-8
+      width 66.666667%
+
+    &.col-9
+      width 75%
+
+    &.col-10
+      width 83.333333%
+
+    &.col-11
+      width 91.666667%
+
+    &.col-12
+      width 100%
+
+    /**
+     * Set alignments.
+     */
+
+    &.middle
+      vertical-align middle
+
+    &.bottom
+      vertical-align bottom
+
+    &.center
+      text-align center
+
+    /**
+     * Revert to display
+     * block on mobile.
+     */
+    @media only screen and (max-width: $mobile)
+      display block
+    
