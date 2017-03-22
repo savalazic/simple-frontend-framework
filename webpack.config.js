@@ -50,6 +50,7 @@ module.exports = {
      }])
   ],
 
+  externals: { 'jquery':'jQuery' },
   resolve:   { extensions:['','.webpack.js','.web.js','.js','.jsx'] },
   output:    { filename: '[name]', path: './' },
   stylus:    { use: [SMixer()] }

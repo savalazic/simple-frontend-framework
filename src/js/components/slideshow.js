@@ -1,5 +1,3 @@
-var $ = require('jquery')
-
 $('.multipleItems').slick({
   infinite: true,
   slidesToShow: 3,

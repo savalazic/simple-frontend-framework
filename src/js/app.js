@@ -1,5 +1,3 @@
-var $ = require('jquery')
-
 require('./vendors/slick.js')
 
 require('./components/copyright.js')
