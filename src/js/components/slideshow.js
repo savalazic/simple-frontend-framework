@@ -1,6 +1,7 @@
 require('slick-carousel')
-require('slick-carousel/slick/slick.css')
-require('slick-carousel/slick/slick-theme.css')
+
+import slick from 'style-loader!css-loader!slick-carousel/slick/slick.css'
+import slicktheme from 'style-loader!css-loader!slick-carousel/slick/slick-theme.css'
 
 $(function() {
 
