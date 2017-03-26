@@ -4,30 +4,71 @@
  * Main layout component.
  */
 
+/**
+* Set default section spacing.
+*/
 section
-  padding 50px 0
+  padding 100px 0
 
-.container
-  max-width 1000px
-  margin 0 auto
-  display block
-  padding 0 1rem
+/**
+ * Set section to be skewed on top.
+ */
+section,
+footer
+  background $white
 
-.col
-  background #eee
+  &.skewed-top
+    position relative
+    z-index 1
 
-.row
+    .col
+      z-index 99999
+
+    &::before
+      background inherit
+      content ''
+      display block
+      height 100%
+      left 0
+      right 0
+      top 0
+      position absolute
+      z-index -1
+      bottom 0
+      transform skewY(3deg)
+      transform-origin 100%
+      -webkit-backface-visibility hidden
+
+  &.skewed-bottom
+    position relative
+    z-index 1
+
+    .col
+      z-index 99999
+
+    &::after
+      background inherit
+      content ''
+      display block
+      height 100%
+      right 0
+      left 0
+      bottom -100%
+      position absolute
+      z-index -1
+      transform skewY(3deg)
+      transform-origin 100%
+      -webkit-backface-visibility hidden
+
+/**
+ * Grid
+ */
+.block
   display table
   position relative
   width 100%
   table-layout fixed
-  overflow hidden
-
-  &.row-reverse
-    direction rtl
-
-    & > .col
-      direction ltr
+  overflow visible
 
   /**
    * Set block to full height.
@@ -49,6 +90,12 @@ section
     max-width 100%
     margin auto
 
+  &.block-reverse
+    direction rtl
+
+    & > .col
+      direction ltr
+
   /**
    * Registe block's children
    * as it's helper elements.
@@ -58,6 +105,7 @@ section
     width auto
     height 100%
     vertical-align top
+    padding 15px 10px
 
     &.col-1
       width 8.333333%
@@ -102,6 +150,9 @@ section
     &.middle
       vertical-align middle
 
+      @media (max-width: $mobile)
+        padding-top 150px
+
     &.bottom
       vertical-align bottom
 
@@ -114,10 +165,3 @@ section
      */
     @media only screen and (max-width: $mobile)
       display block
-
-.row-padded
-  margin-left -1rem
-  margin-right -1rem
-
-  .row
-    border-spacing 1rem 0 

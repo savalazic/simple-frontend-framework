@@ -1,3 +1,13 @@
+require('slick-carousel')
+require('slick-carousel/slick/slick.css')
+require('slick-carousel/slick/slick-theme.css')
+
+$(function() {
+
+  $('.testslick').slick();
+
+})
+
 $('.multipleItems').slick({
   infinite: true,
   slidesToShow: 3,
